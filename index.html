@@ -25,6 +25,9 @@
                 } else {
                     p.innerHTML = eval(f.value + '("f");') + "|" + eval(s.value + '("s");') + "<br>" + p.innerHTML;
                 }
+                onerror = function() {
+                    "An error has occured. Please try again.<br>" + p.innerHTML;
+                }
             }
         </script>
     </body>
