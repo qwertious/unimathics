@@ -4,10 +4,26 @@
         <title>Unimathics</title>
     </head>
     <body>
-        <input type="text">
-        <input type="text">
-        <input type="submit">
+        <input id="f" type="text">
+        <input id="s" type="text">
+        <input type="submit" onclick="e();">
+        <p id="r"></p>
+        <script id="fs" src="default.js"></script>
+        <script id="ss" src="default.js"></script>
+        <script src="numcheck.js"></script>
         <script>
+            f = document.getElementById("f");
+            s = document.getElementById("s");
+            p = document.getElementById("p");
+            fs = document.getElementById("fs");
+            ss = document.getElementById("ss");
+            function e() {
+                fs.src = f.value + ".js";
+                ss.src = s.value + ".js";
+                if (eval(f.value + '("f");') == eval(s.value + '("s");')) {
+                    p.innerHTML = eval(f.value + '("f");') + "<br>" + p.innerHTML;
+                }
+            }
         </script>
     </body>
 </html>
