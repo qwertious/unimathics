@@ -22,6 +22,8 @@
                 ss.src = s.value + ".js";
                 if (eval(f.value + '("f");') == eval(s.value + '("s");')) {
                     p.innerHTML = eval(f.value + '("f");') + "<br>" + p.innerHTML;
+                } else {
+                    p.innerHTML = eval(f.value + '("f");') + "|" + eval(s.value + '("s");') + "<br>" + p.innerHTML;
                 }
             }
         </script>
